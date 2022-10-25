@@ -7,7 +7,11 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader"
+                    loader: "babel-loader",
+                    // Presets that transpiles the JS. It can be passed to .babelrc file
+                    options: {
+                        "presets": ["@babel/preset-env", "@babel/preset-react"]
+                    }
                 }
             },
             {
